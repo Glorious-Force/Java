@@ -1,0 +1,45 @@
+package Test1;
+//类似于c中的include功能
+import java.util.Scanner;
+
+public class Music {
+	public static void main(String args[]) {
+	 	//1.定义变量(包括输入，输出，中间变量):变量名及对应的数据类型，命名采取驼峰法命名规则		
+		String songTitle;
+		float songPrice;
+		int number;
+		
+		float totalRevence;
+		float siteTevence;
+		float manageRevence;
+		float siteRate;
+		float manageRate;
+		
+		//2.为变量赋值(硬编码赋值或者交互式输入)
+		//float类型的常量要在后面加上f后缀
+		siteRate = 0.03f;
+		manageRate = 0.12f;
+		 //从标准输入设备（键盘）创建一个输入对象，从键盘输入各种类型使用对象的nextXxxx方法
+		Scanner scan = new Scanner(System.in);
+		//所有输入前均应该有输入提示
+		//输入时可采取快捷键syso，然后按下alt+/
+		System.out.println("请输入歌曲名称: ");
+		songTitle=scan.nextLine();
+		System.out.println("请输入单价: ");
+		songPrice=scan.nextFloat();
+		System.out.println("请输入数量: ");
+		number=scan.nextInt();
+		
+		
+		//3.运算处理，算术运算+-*
+		totalRevence = songPrice*number;
+		siteTevence = totalRevence*siteRate;
+		manageRevence = totalRevence*manageRate;
+		
+		//4.结果输出，采取的是控制台输出(后期可以是文件，数据库，网络等等)
+		//可以输出任何类型，多个数据之间可以采取+连接起来，println输出完毕后会自动换行
+		System.out.println("总利润:"+totalRevence);
+		System.out.println("经理利润:"+manageRevence);
+		System.out.println("站点利润:"+siteTevence);
+	}
+}
