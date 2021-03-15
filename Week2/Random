@@ -1,0 +1,41 @@
+package Random;
+
+import java.util.Scanner;
+
+public class RandomNumber {
+	public static void main(String[] args) {
+		String choose;
+		do {
+			int randomNumber;
+			int myGuess;
+			randomNumber = 1 + (int) (Math.random() * 1000);
+			System.out.println(randomNumber);
+
+			System.out.println("I have a number	between 1 and 1000.");
+			System.out.println("Can you guess my number?");
+			System.out.println("Please type your first guess.");
+
+			Scanner scan = new Scanner(System.in);
+			int times;
+			for (times = 1; times <= 5; times++) {
+				myGuess = scan.nextInt();
+
+				if (myGuess == randomNumber) {
+					System.out.println("Excellent! You guessed the number!");
+					break;
+				} else {
+					if (myGuess > randomNumber) {
+						System.out.println("Too high! Try Again！");
+					} else {
+						System.out.println("Too Low！Try Again!");
+					}
+					System.out.println("left" + (5 - times));
+				}
+			}
+			System.out.println("Would you like to play again?(y/n)");
+			Scanner scan1 = new Scanner(System.in);
+			choose = scan1.nextLine();
+		} while (choose.equals("y"));
+		System.out.println("Game Over!");
+	}
+}
