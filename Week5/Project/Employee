@@ -1,0 +1,39 @@
+package Week5;
+
+public class Employee {
+	private String department;
+	private String name;
+	private double baseSalary;
+	 public  Employee(String name,
+			 String department,double baseSalary){
+		 this.name = name;
+		 this.department = department;
+		 this.baseSalary = baseSalary;
+	 }
+		 public String getName() {
+			 return name;
+		 }
+
+			public void setName(String name) {
+				this.name = name;
+			}
+			public double getBaseSalary() {
+				return this.baseSalary;
+			}
+			public void setBaseSalary(float baseSalary) {
+				this.baseSalary = baseSalary;
+			}
+		 public void updateSalary(){
+			 this.baseSalary = this.baseSalary * 1.035f;
+			 
+		 }
+
+			public String toString() {
+				String info = "";
+				info = "name=" + this.name + ",department=" + this.department + ",baseSalary="
+						+ this.baseSalary;
+				System.out.println(info);
+				return info;
+			}
+
+}
