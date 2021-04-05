@@ -1,0 +1,46 @@
+package EmployeePlus;
+
+public class EmployeePlus {
+	private String name;
+	private int id;
+	private float baseSalary;
+	private float SalaryIncrease;
+
+	public  EmployeePlus(String name,int id,
+			float baseSalary){
+		 this.name = name;
+		 this.id = id;
+		 this.baseSalary = baseSalary;
+
+	}
+	 public String getName() {
+		 return name;
+	 }
+
+		public void setName(String name) {
+			this.name = name;
+		}
+		public float getBaseSalary() {
+			return this.baseSalary;
+		}
+		public void setBaseSalary(float baseSalary) {
+			this.baseSalary = baseSalary;
+		}
+	 public void updateSalary(){
+		 this.baseSalary = this.baseSalary * 1.035f;
+		 
+	 }
+	 public float getSalaryIncrease(){
+		 this.SalaryIncrease = this.baseSalary *(1/1.035f)*0.035f;
+		 return this.SalaryIncrease;
+		 
+	 }
+
+		public void displayEmployee() {
+			String info = "";
+			info = "id=" + this.id + ",name=" + this.name + ",SalaryIncrease=" + this.SalaryIncrease + ",baseSalary="
+					+ this.baseSalary;
+			System.out.println(info);
+		}
+
+}
