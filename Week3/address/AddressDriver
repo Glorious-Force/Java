@@ -1,0 +1,10 @@
+package Address;
+
+public class AddressDriver {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Address add1 = new Address("中国", "湖北省", "武汉市", "江夏大道",430200);
+		add1.displayAddress();
+	}
+
+}
