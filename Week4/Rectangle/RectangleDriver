@@ -1,0 +1,29 @@
+package Rectangle;
+
+public class RectangleDriver {
+	public static void main(String[] args) {
+		Rectangle Re1= new Rectangle();
+		Rectangle Re2 = new Rectangle(2.3f,1.5f);
+		
+		Re1.displayRectangle();
+		System.out.println("矩形1的面积为:"+Re1.area());
+		System.out.println("矩形1的周长为:"+Re1.perimeter());
+		
+		Re2.displayRectangle();
+		System.out.println("矩形2的面积为:"+Re2.area());
+		System.out.println("矩形2的周长为:"+Re2.perimeter());
+		
+		Re2.setLength(3.4f);
+		Re2.setWidth(2.3f);
+		Re2.displayRectangle();
+		System.out.println("矩形2的面积为:"+Re2.area());
+		System.out.println("矩形2的周长为:"+Re2.perimeter());
+		
+		
+		
+		
+		
+		
+	}
+
+}
