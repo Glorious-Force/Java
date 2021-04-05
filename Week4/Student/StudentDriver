@@ -1,0 +1,11 @@
+package Student;
+
+	public class StudentDriver {
+		public static void main(String[] args) {
+			Student stu1 = new Student("蓝毒","20010118","BluePosion");
+			Student stu2 = new Student("陈","20010707","Chen");
+			stu1.displayStudent();
+			stu2.displayStudent();
+		}
+	
+	}
