@@ -1,0 +1,25 @@
+package Week5;
+
+import java.util.Scanner;
+
+public class Test1 {
+	// 通过键盘输入一个合法的日期格式字符串,取出年,月,日
+	public static void main(String[] arags) {
+		// TODO Auto-generated method stub
+		String data, year, month, day;
+		Scanner scan = new Scanner(System.in);
+		data = scan.next();
+		/*
+		 * 位置从0开始，到4结束,截取的信息不包含结束的位置 子串的长度是结束-开始
+		 *
+		 */
+		year = data.substring(0,4);
+		System.out.println(year);
+		int pos1 = data.indexOf("-");
+		int pos2 = data.indexOf("-", pos1+1);
+		month = data.substring(pos1+1,pos2);
+		System.out.println(month);
+		day = data.substring(pos2+1);
+		System.out.println(day);
+	}
+}
