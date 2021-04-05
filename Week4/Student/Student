@@ -1,0 +1,21 @@
+package Student;
+
+public class Student {
+	private String name;
+	private String phoneNumber;
+	private String studentNumber;
+    public  Student(String name,String phoneNumber,
+		String studentNumber){
+		 this.name = name;
+		 this.phoneNumber = phoneNumber;
+		 this.studentNumber = studentNumber;
+		 }
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void displayStudent() {
+		String info = "";
+		info = "name=" + this.name + ",phoneNumber=" + this.phoneNumber + ",studentNumber=" + this.studentNumber;
+		System.out.println(info);
+	}
+}
