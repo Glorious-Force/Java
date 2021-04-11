@@ -1,0 +1,46 @@
+package Week6;
+
+public class Administrator extends Employee {
+	private double bonus;
+
+	public Administrator() {
+		super();
+	}
+
+	public Administrator(String id, String name, String department, double baseSalary,double bonus) {
+		/*
+		super.setId(id);
+		super.setName(name);
+		super.setDepartment(department);
+		super.setBaseSalary(baseSalary);
+		*/
+		super(id,name,department,baseSalary);
+		this.setBonus(bonus);
+	}
+
+	public double getBonus() {
+		return bonus;
+	}
+
+	public void setBonus(double bonus) {
+		this.bonus = bonus;
+	}
+	//OverWrite
+	public String toString()
+	{
+		String msg = ""; 
+		msg=super.toString();
+		/*msg = "id:" + super.getId() + ",name=" + super.getName();
+		msg += ",department=" + super.getDepartment() + ",baseSalary" + super.getBaseSalary();
+		*/
+		msg+=",bonus="+this.bonus;
+		return msg;
+	}
+		public void updateSalary()
+		{
+			super.updateSalary();
+			super.setBaseSalary(super.getBaseSalary()+this.bonus);
+		}
+}
+
+
