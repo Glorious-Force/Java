@@ -1,0 +1,14 @@
+package Week6;
+
+public class Driver {
+	public static void main(String[] arags) {
+		Administrator admin = new Administrator("101", "tom", "jingli", 114514.0,810);
+		SalePerson sale = new SalePerson("102","jack","yuangong",10000.0,8000);
+		System.out.println(admin.toString());
+		System.out.println(sale.toString());
+		admin.updateSalary();
+		System.out.println(admin.getBaseSalary());
+		sale.updateSalary();
+		System.out.println(sale.getBaseSalary());
+	}
+}
