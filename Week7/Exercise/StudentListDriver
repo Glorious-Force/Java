@@ -1,0 +1,50 @@
+package Exercise;
+
+public class StudentListDriver {
+	public static void main(String[] arags) {
+
+		StudentList list = new StudentList(10);
+		// TODO Auto-generated method stub
+
+		if (list.add(new Student("1001", "tom"))) {
+			System.out.println("增加成功!");
+		} else {
+			System.out.println("增加失败!");
+		}
+		if (list.add(new Student("1002", "jack"))) {
+			System.out.println("增加成功!");
+		} else {
+			System.out.println("增加失败!");
+		}
+		if (list.add(new Student("1003", "bili"))) {
+			System.out.println("增加成功!");
+		} else {
+			System.out.println("增加失败!");
+		}
+
+		int index = list.indexOf("1001");
+		if (index != -1) {
+			System.out.println("找到的数据为:\n");
+			System.out.println(list.get(index).toString());
+		} else {
+			System.out.println("not found!");
+		}
+
+		System.out.println("集合中的元素个数为:" + list.size());
+		System.out.println(list.toString());
+
+		index = list.indexOf("1001");
+		if (index != -1) {
+			if (list.remove(index)) {
+				System.out.println("删除成功!");
+				System.out.println("集合中的元素个数为:" + list.size());
+				System.out.println("删除后的数据为:");
+				System.out.println(list.toString());
+			}
+
+			else {
+				System.out.println("not found!");
+			}
+		}
+	}
+}
