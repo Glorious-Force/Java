@@ -1,0 +1,64 @@
+package Exercise;
+
+public class StudentList {
+	private Student list[];
+	private int count;
+
+	public StudentList(int maxsize) {
+		list = new Student[maxsize];
+		count = 0;
+
+	}
+
+	public boolean add(Student student) {
+		if (student == null)
+			return false;
+		if (count >= list.length)
+			return false;
+		list[count] = student;
+		count++;
+		return true;
+	}
+
+	public int indexOf(String id) {
+		for (int i = 0; i < list.length && list[i] != null; i++) {
+			if (list[i].getId().equals(id))
+				return i;
+		}
+		return -1;
+	}
+
+	public int size() {
+		return this.count;
+	}
+
+	public Student get(int index) {
+		return list[index];
+	}
+
+	public String toString() {
+		String info = "";
+		for (int i = 0; i < list.length && list[i] != null; i++) {
+			info += list[i].toString() + "\n";
+		}
+		return info;
+	}
+
+	public boolean remove(int index) {
+		if (index < 0 || index >= count) {
+			return false;
+			}
+		list[index] = null;
+		count--;
+		if (index == count - 1 || count == 0) {
+			return true;
+		}
+
+		for (int i = index; i < count; i++) {
+			list[i] = list[i + 1];
+		}
+		list[count] = null;
+		return true;
+
+	}
+}
